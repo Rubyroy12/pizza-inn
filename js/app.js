@@ -56,13 +56,16 @@ $(document).ready(function(){
         // $("p#ordertopping").append(inputtedtopping);
         // $("p#ordercrust").append(inputtedcrust);
         function getprice(){
-            price= [1]
-           
+            var price=0;
+            if (inputtedsize== 'large'){
+                price =2500;
+               
+                $("#price").append(price)        
+            }
         
         }
 
         $("p#fullorder").append(fullorder.fullorder1());
-        $("#price").append(price)  
        
 
         $("form#myform").slideUp();
