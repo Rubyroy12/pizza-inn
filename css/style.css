@@ -3,8 +3,13 @@ body{
 }
 
 .container{
-    background-color: rgb(3, 156, 80);
+    background-image:url(../images/pixzzainnBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter:brightness(0.6);
+    /* color:white; */
 }   
 #myform {
     display: none;
+    color:aqua;
 }

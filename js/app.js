@@ -12,6 +12,7 @@ Order.prototype.fullorder1 = function(){
     return this.size + ", "+ this.topping +" ,"+ this.crust;
 }
  
+
 // order.size= new size(large,medium,small);
 // var size = [large, medium, small];
 // var sprice = [2000,1500, 1000];
@@ -54,7 +55,16 @@ $(document).ready(function(){
        
         // $("p#ordertopping").append(inputtedtopping);
         // $("p#ordercrust").append(inputtedcrust);
+        function getprice(){
+            price= [1]
+           
+        
+        }
+
         $("p#fullorder").append(fullorder.fullorder1());
+        $("#price").append(price)  
+       
+
         $("form#myform").slideUp();
         
 
