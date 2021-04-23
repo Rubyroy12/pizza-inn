@@ -43,7 +43,20 @@ $(document).ready(function () {
     $("#makeorderbtn").on("click", function () {
         $("form#myform").fadeIn();
         $(this).text("Make another order");
+        $("#checkoutbtn").show();
     })
+    $("#checkoutbtn").on("click", function () {
+        $(".cart").show();
+        //     $(this).text("Hide");
+        //     $(this).addClass("hidebtn");
+
+    })
+    // $(".hidebtn").on("click", function () {
+    //     $(".cart").hide();
+    //     $(this).text("Checkout");
+    //     $(this).addClass(".checkoutbtn");
+    // })
+
 })
 $(document).ready(function () {
     $("form#myform").submit(function (event) {
@@ -85,7 +98,7 @@ $(document).ready(function () {
         } else if (inputtedcrust == "Focaccia") {
             crustprice = 300;
         }
-       const total = sizeprice + toppingprice + crustprice;
+        const total = sizeprice + toppingprice + crustprice;
 
 
 

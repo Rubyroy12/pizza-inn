@@ -17,7 +17,20 @@ body {
 }
 .welcome>p {
     font-family: 'Lobster';
+    margin-top:40px;
 }
 .welcome>h2{
     font-family: 'Acme';
+}
+.cart{
+    display: none;
+}
+#checkoutbtn{
+    display: none;
+}
+.hidebtn{
+   color: rgb(80, 9, 4);
+}
+.checkoutbtn{
+    color: black;
 }
