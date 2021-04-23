@@ -1,14 +1,14 @@
 // business logic
 
 function Order(size, topping, crust) {
-    this.size = {};
-    this.topping = {};
-    this.crust = {};
+    this.size = size;
+    this.topping = topping;
+    this.crust = crust;
 }
  
 
 //  const size = new Order(large:2000, medium:1500, )
-Order.prototype.fullorder = function(){
+Order.prototype.fullorder1 = function(){
     return this.size + this.topping + this.crust;
 }
 // var 
@@ -40,10 +40,11 @@ $(document).ready(function(){
         var inputtedsize= $("#size").val();
         var inputtedtopping= $("#topping").val();
         var inputtedcrust= $("#crust").val();
-
-        $("p#ordersize").append(inputtedsize);
-        $("p#ordertopping").append(inputtedtopping);
-        $("p#ordercrust").append(inputtedcrust);
+         var fullorder= new Order(inputtedsize, inputtedtopping, inputtedcrust)
+        // $("p#ordersize").append(inputtedsize);
+        // $("p#ordertopping").append(inputtedtopping);
+        // $("p#ordercrust").append(inputtedcrust);
+        $("p#fullorder").append(fullorder.fullorder1());
 
 
     })
