@@ -41,6 +41,27 @@ body {
 .checkoutbtn{
     color: black;
 }
-#makeorderbtn{
+/* #makeorderbtn{
 
+} */
+.imagesection>div>img{
+    height: 250px;
+    width: 250px;
+    border-radius: 80%;
+    border: 2px solid red;
+    box-shadow: 0px 2px 2px 3px green;
+    /* border: 1px solid green; */
+}
+.imagesection>div>img:hover{
+    transform: scale(1.03);
+
+}
+.imagesection{
+    margin: 40px;
+}
+hr{
+    width: 70%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
