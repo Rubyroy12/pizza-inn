@@ -17,13 +17,20 @@ body {
 }
 .welcome>p {
     font-family: 'Lobster';
-    margin-top:40px;
+    margin-top:10px;
+    font-size: 25px;
 }
 .welcome>h2{
     font-family: 'Acme';
-}
+    font-size: 40px;
+    padding-top:20px;
+     /* margin: 20px; */
+} 
 .cart{
     display: none;
+    margin-top: 15px;
+    background-color:rgb(196, 194, 193);
+    border: 2px solid rgb(211, 85, 85) ;
 }
 #checkoutbtn{
     display: none;
@@ -33,4 +40,7 @@ body {
 }
 .checkoutbtn{
     color: black;
+}
+#makeorderbtn{
+
 }

@@ -46,7 +46,7 @@ $(document).ready(function () {
         $("#checkoutbtn").show();
     })
     $("#checkoutbtn").on("click", function () {
-        $(".cart").show();
+        
         //     $(this).text("Hide");
         //     $(this).addClass("hidebtn");
 
@@ -106,6 +106,7 @@ $(document).ready(function () {
 
 
         $("form#myform").slideUp();
+        $(".cart").show();
 
 
 

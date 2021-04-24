@@ -22,13 +22,13 @@
             <h2 class="text-white">Welcome to Craft Pizza</h2>
 
             <p class="text-white">where pizza is a pleasure</p>
+            <button id="makeorderbtn" class="btn bg-primary text-white">Make order</button> 
         </div>
 
-        <button id="makeorderbtn" class="btn bg-primary">Make order</button> <button type="button"
-            class="btn bg-warning" id="checkoutbtn">check out</button>
+
 
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-5">
                 <form id="myform">
                     <div class="form-group">
                         <label for="size">Select Pizza size</label>
@@ -55,7 +55,7 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn bg-warning">Order</button>
+                    <button type="submit" class="btn bg-warning">Check Out</button>
 
                 </form>
 
@@ -64,7 +64,7 @@
 
             </div>
             <div class="col-md-5">
-                <div class="cart">
+                <div class="cart card card-body text-success">
                     <h2>My order</h2>
                     <ul id="fullorder"> </ul>
 
