@@ -63,6 +63,7 @@ $(document).ready(function () {
         var inputtedsize = $("#size").val();
         var inputtedtopping = $("#topping").val();
         var inputtedcrust = $("#crust").val();
+        var inputtedlocation= $("#location").val();
         var fullorder = new Order(inputtedsize, inputtedtopping, inputtedcrust)
 
         // $("p#ordertopping").append(inputtedtopping);
@@ -108,9 +109,15 @@ $(document).ready(function () {
 
         $("#totalcost").append(totalcost);
         $("#somename").append(inputedname);
+        $("#place").append(inputtedlocation);
+        $(".name").hide();
+        $("#name").append(inputedname).val("");
         $("form#myform").slideUp();
         $(".cart").show();
         $("#complete").on("click", function () {
+            $("#successtext").show();
+            $("#location").append(inputtedlocation).val();
+            $("#sname").append(inputedname).val();
 
         })
 

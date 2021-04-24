@@ -30,7 +30,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-5">
                 <form id="myform">
-                    <div class="form-group">
+                    <div class="form-group name">
                         <label for="name">Name:</label>
                         <input type="text" class="form-control" id="name">
                     </div>
@@ -76,18 +76,23 @@
                 <div class="cart card card-body text-success">
                     <h2>My order</h2>
                     <p>Welcome, <span id="somename"></span></p>
-                    
+
+                    <p id="successtext"><span id="sname"></span>, your order is <strong>successfull</strong> , it
+                        will be delivered to <span id="place"></span>..In case of inconvience , please feel free to
+                        reach us.</p>
+
                     <ol id="fullorder"> </ol>
 
                     <p>Total Cost: <span id="totalcost"></span>Kshs.</p>
 
                     <div class="form-group">
-                        <div  id="mylocation">
+                        <div id="mylocation">
                             <label for="location">Input Location:</label>
-                            <input type="text" id="location"><p><span id="success"></span></p>
+                            <input type="text" id="location">
+                            <p><span id="success"></span></p>
                         </div>
-                    <button class="btn bg-danger" id="complete">Complete Order</button>
-                
+                        <button class="btn bg-danger" id="complete">Complete Order</button>
+
 
                     </div>
 
