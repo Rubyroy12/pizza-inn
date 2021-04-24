@@ -45,10 +45,8 @@ $(document).ready(function () {
         $(this).text("Make another order");
         $("#checkoutbtn").show();
     })
-    $("#checkoutbtn").on("click", function () {
-        
-        //     $(this).text("Hide");
-        //     $(this).addClass("hidebtn");
+    $("#cancel").on(click, function () {
+        $("form#myform").slideUp();
 
     })
     // $(".hidebtn").on("click", function () {
@@ -102,9 +100,10 @@ $(document).ready(function () {
 
 
 
-        $("ul#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
+        $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
+        // var totalcost = total++;
 
-
+        // $("#totalcost").append(totalcost);
         $("form#myform").slideUp();
         $(".cart").show();
 
