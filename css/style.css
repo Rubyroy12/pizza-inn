@@ -65,3 +65,10 @@ hr{
     justify-content: center;
     align-items: center;
 }
+.message{
+    font-size: larger;
+    font-family: 'Courier New', Courier, monospace;
+}
+.col-md-5{
+    
+}

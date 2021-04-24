@@ -22,12 +22,12 @@
             <h2 class="text-white">Welcome to Craft Pizza</h2>
 
             <p class="text-white">where pizza is a pleasure</p>
-            <button id="makeorderbtn" class="btn bg-primary text-white">Make order</button> 
+            <button id="makeorderbtn" class="btn bg-primary text-white">Make order</button>
         </div>
 
 
 
-        <div class="row">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-5">
                 <form id="myform">
                     <div class="form-group">
@@ -65,12 +65,20 @@
 
 
             </div>
-            <div class="col-md-5">
+        </div>
+        <div class="row d-flex justify-content-center">
+
+            <div class="col-md-7">
                 <div class="cart card card-body text-success">
                     <h2>My order</h2>
                     <ol id="fullorder"> </ol>
 
                     <p>Total Cost: <span id="totalcost">5908</span>Kshs.</p>
+
+                   <div id="mylocation">
+                       <label for="location">Choose Location:</label>
+                       <input type="text" class="form-control" id="location">
+                   </div>
 
 
                 </div>
@@ -83,30 +91,34 @@
             <div class="imagesection d-flex flex-row justify-content-between align-items-center">
                 <div id="pepperoni">
                     <img src="./images/p1.jpg" alt="">
-                <p>Pepperoni Pizza</p>
+                    <p>Pepperoni Pizza</p>
                 </div>
 
-               <div id="montena">
-                <img src="./images/Montano.jpeg" alt="">
-                <p>Veggie Pizza</p>
-               </div>
+                <div id="montena">
+                    <img src="./images/Montano.jpeg" alt="">
+                    <p>Veggie Pizza</p>
+                </div>
                 <div id="mushroom">
                     <img src="./images/p2.jpeg" alt="">
-                <p>Mushroom Pizza</p>
+                    <p>Mushroom Pizza</p>
                 </div>
             </div>
         </div>
+       <div class="message d-flex justify-content-center">
+        "UNLESS YOU ARE A PIZZA, THE ANSWER IS YES, I CAN LIVE WITHOUT YOU"
+       </div>
         <div class="row">
             <div class="col-md-5">
                 <h3>Our prooducts </h3>
+
             </div>
             <div class="col-md-5">
                 <h3>Community</h3>
             </div>
-        
+
         </div>
         <div>
-            <div class="footer card-footer d-flex justify-content-center text-warning">
+            <div class="footer card-footer d-flex justify-content-center text-warning ">
                 <p>Copyright &#169 2021 Craft pizza Inc.</p>
             </div>
         </div>
