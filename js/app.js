@@ -45,7 +45,7 @@ $(document).ready(function () {
         $(this).text("Make another order");
         $("#checkoutbtn").show();
     })
-    $("#cancel").on(click, function () {
+    $("#cancel").on("click", function () {
         $("form#myform").slideUp();
 
     })
@@ -59,6 +59,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("form#myform").submit(function (event) {
         event.preventDefault();
+        var inputedname= $("#name").val();
         var inputtedsize = $("#size").val();
         var inputtedtopping = $("#topping").val();
         var inputtedcrust = $("#crust").val();
@@ -101,12 +102,17 @@ $(document).ready(function () {
 
 
         $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
-        var totalcost =total;
+        var totalcost=0; 
+        var totalcost = totalcost + total;
 
 
-        // $("#totalcost").append(totalcost);
+        $("#totalcost").append(totalcost);
+        $("#somename").append(inputedname);
         $("form#myform").slideUp();
         $(".cart").show();
+        $("#complete").on("click", function () {
+
+        })
 
 
 

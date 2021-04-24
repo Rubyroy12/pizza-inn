@@ -31,7 +31,11 @@
             <div class="col-md-5">
                 <form id="myform">
                     <div class="form-group">
-                        <label for="size">Select Pizza size</label>
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="size">Select Pizza size:</label>
                         <select class="form-select" aria-label="Default select example" id="size">
                             <option value="small">Small</option>
                             <option value="medium">Medium</option>
@@ -39,7 +43,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="topping">Select your favourite topping</label>
+                        <label for="topping">Select your favourite topping:</label>
                         <select class="form-select" aria-label="Default select example" id="topping">
                             <option value="broccoli">Broccoli</option>
                             <option value="bacon">Bacon</option>
@@ -47,7 +51,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="crust">Select your favourite crust</label>
+                        <label for="crust">Select your favourite crust:</label>
                         <select class="form-select" aria-label="Default select example" id="crust">
                             <option value="Newyorkstyle">New York style</option>
                             <option value="Double-dough">Double-dough</option>
@@ -71,14 +75,21 @@
             <div class="col-md-7">
                 <div class="cart card card-body text-success">
                     <h2>My order</h2>
+                    <p>Welcome, <span id="somename"></span></p>
+                    
                     <ol id="fullorder"> </ol>
 
-                    <p>Total Cost: <span id="totalcost">5908</span>Kshs.</p>
+                    <p>Total Cost: <span id="totalcost"></span>Kshs.</p>
 
-                   <div id="mylocation">
-                       <label for="location">Choose Location:</label>
-                       <input type="text" class="form-control" id="location">
-                   </div>
+                    <div class="form-group">
+                        <div  id="mylocation">
+                            <label for="location">Input Location:</label>
+                            <input type="text" id="location"><p><span id="success"></span></p>
+                        </div>
+                    <button class="btn bg-danger" id="complete">Complete Order</button>
+                
+
+                    </div>
 
 
                 </div>
@@ -104,9 +115,10 @@
                 </div>
             </div>
         </div>
-       <div class="message d-flex justify-content-center">
-        "UNLESS YOU ARE A PIZZA, THE ANSWER IS YES, I CAN LIVE WITHOUT YOU"
-       </div>
+        <div class="message d-flex justify-content-center">
+            "A PIZZA SLICE A DAY KEEPS SADNESS AWAY"
+        </div>
+        <br>
         <div class="row">
             <div class="col-md-5">
                 <h3>Our prooducts </h3>
