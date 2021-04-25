@@ -109,14 +109,14 @@ $(document).ready(function () {
 
         $("#totalcost").append(totalcost);
         $("#somename").append(inputedname);
-        $("#place").append(inputtedlocation);
+        // $("#place").append(inputtedlocation);
         $(".name").hide();
         $("#name").append(inputedname).val("");
         $("form#myform").slideUp();
         $(".cart").show();
         $("#complete").on("click", function () {
             $("#successtext").show();
-            $("#location").append(inputtedlocation).val();
+            $("#place").html(inputtedlocation).val();
             $("#sname").append(inputedname).val();
 
         })
@@ -126,3 +126,7 @@ $(document).ready(function () {
 
     })
 })
+// $(document).ready(function(){
+//     var inputtedlocation = $("#place").val()
+
+// })
