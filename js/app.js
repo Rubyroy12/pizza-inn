@@ -59,17 +59,19 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("form#myform").submit(function (event) {
         event.preventDefault();
-        var inputedname= $("#name").val();
+        var inputedname = $("#name").val();
         var inputtedsize = $("#size").val();
         var inputtedtopping = $("#topping").val();
-        var inputtedcrust = $("#crust").val();        var fullorder = new Order(inputtedsize, inputtedtopping, inputtedcrust)
+        var inputtedlocation = $("#location").val();
+        var inputtedcrust = $("#crust").val();
+        var fullorder = new Order(inputtedsize, inputtedtopping, inputtedcrust)
 
         // $("p#ordertopping").append(inputtedtopping);
         // $("p#ordercrust").append(inputtedcrust);
 
-        var sizeprice, toppingprice, crustprice = 0;
+        // var sizeprice, toppingprice, crustprice = 0;
         if (inputtedsize == "large") {
-            sizeprice = 2500;
+           var sizeprice = 2500;
 
             // $("#price").append(sprice);
         } else if (inputtedsize == "medium") {
@@ -80,7 +82,7 @@ $(document).ready(function () {
 
         // var toppingprice =0;
         if (inputtedtopping == "broccoli") {
-            toppingprice = 250;
+          var  toppingprice = 250;
         } else if (inputtedtopping == "bacon") {
             toppingprice = 300;
         } else if (inputtedtopping == "Sausage") {
@@ -89,32 +91,33 @@ $(document).ready(function () {
 
         // var crustprice = 0;
         if (inputtedcrust == "Newyorkstyle") {
-            crustprice = 200;
+            var crustprice = 200;
 
         } else if (inputtedcrust == "Double-dough") {
             crustprice = 350;
         } else if (inputtedcrust == "Focaccia") {
             crustprice = 300;
         }
-        const total = sizeprice + toppingprice + crustprice;
+        var total = sizeprice + toppingprice + crustprice;
+
 
 
 
         $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
-        var totalcost=0; 
-        var totalcost = totalcost + total;
+        var totalcost = 0;
+        var totalcost = parseInt(totalcost) + parseInt(total);
 
 
-        $("#totalcost").append(totalcost);
+        $("#totalcost").append(totalcost).val();
         $("#somename").append(inputedname);
-        // $("#place").append(inputtedlocation);
+        $("#place").append(inputtedlocation);
         $(".name").hide();
         $("#name").append(inputedname).val("");
         $("form#myform").slideUp();
         $(".cart").show();
         $("#complete").on("click", function () {
             $("#successtext").show();
-            $("#place").html(inputtedlocation).val();
+            // $("#place").html(inputtedlocation).val();
             $("#sname").append(inputedname).val();
 
         })
