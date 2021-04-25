@@ -62,9 +62,7 @@ $(document).ready(function () {
         var inputedname= $("#name").val();
         var inputtedsize = $("#size").val();
         var inputtedtopping = $("#topping").val();
-        var inputtedcrust = $("#crust").val();
-        var inputtedlocation= $("#location").val();
-        var fullorder = new Order(inputtedsize, inputtedtopping, inputtedcrust)
+        var inputtedcrust = $("#crust").val();        var fullorder = new Order(inputtedsize, inputtedtopping, inputtedcrust)
 
         // $("p#ordertopping").append(inputtedtopping);
         // $("p#ordercrust").append(inputtedcrust);
