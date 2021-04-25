@@ -104,7 +104,7 @@ $(document).ready(function () {
 
 
         $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
-        // var totalcost = 0;
+        var totalcost = 0;
         var totalcost = parseInt(totalcost) + parseInt(total);
 
 
