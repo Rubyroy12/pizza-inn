@@ -8,7 +8,7 @@
 - - sudo apt install git
 - - git clone https://github.com/Rubyroy12/pizza-inn.git
 ## Live site
-- View [live]()
+- View [live](https://rubyroy12.github.io/pizza-inn/)
 ## Technologies used
 1. HTML
 2. CSS

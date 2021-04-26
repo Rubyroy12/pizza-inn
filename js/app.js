@@ -155,7 +155,9 @@ function reset(event){
     $("#location").append("").val("");
     $("#remove").fadeIn();
     // $(".cart").hide();
+    $("#totalcost2").hide();
     event.preventDefault();
+
 
 
 
