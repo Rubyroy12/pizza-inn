@@ -98,6 +98,7 @@ hr {
     height: 250px;
     width: 250px;
     border-radius: 10%;
+    border-bottom: 2px solid green; 
 
 }
 
@@ -111,4 +112,7 @@ hr {
 
 .col-md-4>img:hover {
     transform: scale(1.03);
+}
+.info>.card{
+    background-image: linear-gradient(green,red);
 }

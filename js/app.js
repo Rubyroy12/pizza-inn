@@ -62,7 +62,7 @@ $(document).ready(function () {
         var inputedname = $("#name").val();
         var inputtedsize = $("#size").val();
         var inputtedtopping = $("#topping").val();
-        var inputtedlocation = $("#location").val();
+        // var inputtedlocation = $("#location").val();
         var inputtedcrust = $("#crust").val();
         var fullorder = new Order(inputtedsize, inputtedtopping, inputtedcrust)
 
@@ -104,19 +104,19 @@ $(document).ready(function () {
 
 
         $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
-        var totalcost = 0;
+        var totalcost = parseInt(0);
         var totalcost = parseInt(totalcost) + parseInt(total);
 
 
         $("#totalcost").append(totalcost).val();
         $("#somename").append(inputedname);
-        $("#place").append(inputtedlocation);
+        // $("#place").text(inputtedlocation);
         $(".name").hide();
         $("#name").append(inputedname).val("");
         $("form#myform").slideUp();
         $(".cart").show();
         $("#complete").on("click", function () {
-            $("#successtext").show();
+            $("#successtext").fadeIn(800);
             // $("#place").html(inputtedlocation).val();
             $("#sname").append(inputedname).val();
 
@@ -127,7 +127,12 @@ $(document).ready(function () {
 
     })
 })
-// $(document).ready(function(){
-//     var inputtedlocation = $("#place").val()
+function getlocation(){
 
-// })
+    var inputtedlocation = document.getElementById("location").value;
+
+    document.getElementById("place").innerHTML= inputtedlocation;
+
+
+}
+
