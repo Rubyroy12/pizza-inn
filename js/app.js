@@ -106,6 +106,7 @@ $(document).ready(function () {
         $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
         var totalcost = parseInt(0);
         var totalcost = parseInt(totalcost) + parseInt(total);
+        var totalcost2 = totalcost + 200
 
 
         $("#totalcost").append(totalcost).val();
@@ -119,8 +120,16 @@ $(document).ready(function () {
             $("#successtext").fadeIn(800);
             // $("#place").html(inputtedlocation).val();
             $("#sname").append(inputedname).val();
+            $("#remove").hide();
+            $("#totalcost").show();
+            $("#totalcost2").append(totalcost2).val();
 
         })
+        // $("ol#fullorder").show();
+        
+        // $("#successtext").show();
+       
+
 
 
 
@@ -130,22 +139,26 @@ $(document).ready(function () {
 function getlocation(){
 
     var inputtedlocation = document.getElementById("location").value;
+    if(inputtedlocation==" "){
+        document.getElementById("validate").innerHTML="This field is required"
+    }
 
     document.getElementById("place").innerHTML= inputtedlocation;
 
 
 }
 function reset(event){
-    $("ol#fullorder").remove();
-    $("#totalcost").remove();
-    $("#successtext").remove();
+    $("ol#fullorder").hide();
+    $("#totalcost").hide();
+    $("#successtext").hide();
     // document.getElementById("location").innerHTML= null;
     $("#location").append("").val("");
     $("#remove").fadeIn();
-    $(".cart").hide();
+    // $(".cart").hide();
     event.preventDefault();
 
 
 
 
 }
+
