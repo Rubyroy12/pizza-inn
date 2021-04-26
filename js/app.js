@@ -135,4 +135,13 @@ function getlocation(){
 
 
 }
+function reset(){
+    $("ol#fullorder").remove();
+    $("#totalcost").remove();
+    $("#successtext").remove();
+    // document.getElementById("location").innerHTML= null;
+    $("#location").append("").val("");
+    $("#remove").fadeIn();
 
+
+}
