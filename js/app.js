@@ -98,14 +98,14 @@ $(document).ready(function () {
         } else if (inputtedcrust == "Focaccia") {
             crustprice = 300;
         }
-        var total = sizeprice + toppingprice + crustprice;
+        var total = parseInt(sizeprice) + parseInt(toppingprice) + parseInt(crustprice);
 
 
 
 
         $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
         var totalcost = parseInt(0);
-        var totalcost = parseInt(totalcost) + parseInt(total);
+        var  totalcost = parseInt(totalcost + total);
         var totalcost2 = totalcost + 200
 
 
@@ -157,6 +157,7 @@ function reset(event){
     // $(".cart").hide();
     $("#totalcost2").hide();
     event.preventDefault();
+    document.getElementById("#myform").reset();
 
 
 

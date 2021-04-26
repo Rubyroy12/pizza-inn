@@ -127,3 +127,7 @@ hr {
     font-weight: bold;
     font-size: 18px;
 }
+#totalcost2{
+    text-decoration: underline;
+    font-weight: bold;
+}

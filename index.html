@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <link rel="icon" href="./images/crafticon.png">
+    <link rel="icon" href="./images/crafticon.png">
     <title>Pizza Inn website</title>
 </head>
 
@@ -84,23 +84,29 @@
                     <ol id="fullorder"> </ol>
 
                     <p>Total Cost: <span id="totalcost"></span>Kshs.</p>
-                    <p>Total Cost: <span id="totalcost2"></span>Kshs.</p>
-                    
+
+
 
                     <div class="form-group">
                         <div id="mylocation">
                             <label for="location">Input Location:</label>
-                            <input type="text" id="location" placeholder="Enter your location"><p id="validate"></p>
-                            <p><span id="success "> NB:Delivery fee is fixed with <span class="text-danger"> Ksh.200.</span></span></p>
+                            <input type="text" id="location" placeholder="Enter your location">
+                            <p id="validate"></p>
+                            <p><span id="success "> NB:Delivery fee is fixed with <span class="text-danger">
+                                        Ksh.200.</span></span></p>
                             <p id="successtext" class="card bg-white"><span id="sname"></span>, your order is
                                 <strong>successfull</strong> ,
                                 it
-                                will be delivered to <span id="place"></span> within an hour.In case of inconvience , please feel free
+                                will be delivered to <span id="place"></span> within an hour.In case of inconvience ,
+                                please feel free
                                 to
-                                reach us.</p>
-                                <p id="remove">CART REMOVED SUCCESSFULLY</p>
+                                reach us. <br>
+                                Total Bill: <span id="totalcost2"></span>Kshs.</p>
+                            </p>
+                            <p id="remove">CART REMOVED SUCCESSFULLY</p>
                         </div>
-                        <button class="btn bg-danger" id="complete" onclick="getlocation()">Complete Order</button>
+                        <button class="btn bg-danger" id="complete" type="submit" onclick="getlocation()">Complete
+                            Order</button>
                         <button class="btn bg-success text-white" onclick="reset()">Clear</button>
 
 
@@ -149,7 +155,7 @@
             <div class="col-md-4 card">
                 <h3>Location</h3>
                 <p>Feel free to visit us</p>
-                <p>located at NAirobi , Kenya.</p>
+                <p>located at Nairobi , Kenya.</p>
                 <p>South B-shopping center</p>
                 <p>P.O Box 1957</p>
                 <p>Craft Pizza Inn</p>
