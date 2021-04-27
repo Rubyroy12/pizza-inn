@@ -71,43 +71,47 @@ $(document).ready(function () {
 
         // var sizeprice, toppingprice, crustprice = 0;
         if (inputtedsize == "large") {
-           var sizeprice = 2500;
+            var sizeprice = parseInt(2500);
 
             // $("#price").append(sprice);
         } else if (inputtedsize == "medium") {
-            sizeprice = 1500;
+            sizeprice = parseInt(1500);
         } else if (inputtedsize == "small") {
-            sizeprice = 1000;
+            sizeprice = parseInt(1000);
         }
 
         // var toppingprice =0;
         if (inputtedtopping == "broccoli") {
-          var  toppingprice = 250;
+            var toppingprice = parseInt(250);
         } else if (inputtedtopping == "bacon") {
-            toppingprice = 300;
+            toppingprice = parseInt(300);
         } else if (inputtedtopping == "Sausage") {
-            toppingprice = 200;
+            toppingprice = parseInt(200);
         }
 
         // var crustprice = 0;
         if (inputtedcrust == "Newyorkstyle") {
-            var crustprice = 200;
+            var crustprice = parseInt(200);
 
         } else if (inputtedcrust == "Double-dough") {
-            crustprice = 350;
+            crustprice = parseInt(350);
         } else if (inputtedcrust == "Focaccia") {
-            crustprice = 300;
+            crustprice = parseInt(300);
         }
-        var total = parseInt(sizeprice) + parseInt(toppingprice) + parseInt(crustprice);
+        var newtotal = parseInt(sizeprice) + parseInt(toppingprice) + parseInt(crustprice);
 
 
 
 
-        $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + total + "/=</span></li>");
-        var totalcost = parseInt(0);
-        var  totalcost = parseInt(totalcost + total);
-        var totalcost2 = totalcost + 200
+        $("ol#fullorder").append("<li><span class='orderlist'>" + fullorder.fullorder1() + "</span>" + "<span id='price'> -(" + sizeprice + "+" + toppingprice + "+" + crustprice + ")=" + "<span id=total>" + parseInt(newtotal) + "</span></li>");
+        
+        var total=  0;
+        var totalcost = total + newtotal;
+        
+        
+    
 
+        var totalcost2 = totalcost + 200 // add delivery cost
 
         $("#totalcost").append(totalcost).val();
         $("#somename").append(inputedname);
@@ -126,9 +130,9 @@ $(document).ready(function () {
 
         })
         // $("ol#fullorder").show();
-        
+
         // $("#successtext").show();
-       
+
 
 
 
@@ -136,18 +140,20 @@ $(document).ready(function () {
 
     })
 })
-function getlocation(){
+
+function getlocation() {
 
     var inputtedlocation = document.getElementById("location").value;
-    if(inputtedlocation==" "){
-        document.getElementById("validate").innerHTML="This field is required"
+    if (inputtedlocation == " ") {
+        document.getElementById("validate").innerHTML = "This field is required"
     }
 
-    document.getElementById("place").innerHTML= inputtedlocation;
+    document.getElementById("place").innerHTML = inputtedlocation;
 
 
 }
-function reset(event){
+
+function reset(event) {
     $("ol#fullorder").hide();
     $("#totalcost").hide();
     $("#successtext").hide();
@@ -160,8 +166,4 @@ function reset(event){
     document.getElementById("#myform").reset();
 
 
-
-
-
 }
-
